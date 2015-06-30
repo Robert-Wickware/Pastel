@@ -3,6 +3,13 @@
 var express = require('express');
 var path = require('path');
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://wickware-admin:R2-pakouhite@ds051831.mongolab.com:51831/heroku_mlcfqv1f');
+if(mongoose.connection != null) {
+  console.log("Connected to database!");
+}
+
+
 var routes = require(path.join(__dirname, 'routes/index'));
 var app = express();
 
