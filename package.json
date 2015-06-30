@@ -1,0 +1,26 @@
+{
+  "name": "pastel",
+  "version": "1.0.0",
+  "description": "Video workflow made by Wickware Communications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Robert-Wickware@github.com/Robert-Wickware/Pastel.git"
+  },
+  "author": "Robert Evola",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Robert-Wickware/Pastel/issues"
+  },
+  "homepage": "https://github.com/Robert-Wickware/Pastel#readme",
+  "dependencies": {
+    "express": "^4.13.0",
+    "mongoose": "^4.0.6"
+  },
+  "engines": {
+    "node": "0.12.x"
+  }
+}
