@@ -1,12 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Template Test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Template Test</title>
+	
+	<!-- Video.js linking -->
+	<link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/4.11/video.js"></script>	
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Custom Files -->
+	<script src="/javascript/index.js"></script>
+	<link href="/stylesheets/pastel_style.css" rel="stylesheet">
+	
 </head>
+
 <body>
+		<nav class="navbar">
+			<a class="navbar-brand" href="#">
+				<img class="pull-left" src="/assets/images/logos/pastel_logo_small.png" alt="Pastel Logo">
+			</a>
 
-<h1>{{name}}</h1>
-<p>{{job}}</p>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="left-seperator">
+						<a href="#"> <img src="/assets/images/logos/template_logo_small.png">Template</a>
+					</li>
+					<li class="left-seperator right-seperator">
+						<a href="#"> <img src="/assets/images/logos/script_logo_small.png">Script</a>
+					</li>
+					<li class="right-seperator">
+						<a href="#"> <img src="/assets/images/logos/record_logo_small.png">Record</a>
+					</li>
+					<li class="right-seperator">
+						<a href="#"> <img src="/assets/images/logos/edit_logo_small.png">Edit</a>
+					</li>
+				</ul>
+				
+				<button id="save-btn" type="button" class="btn btn-primary btn-lg navbar-btn navbar-right">
+					<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Save
+				</button>
 
+			</div>
+
+		</nav>
+		
+		<div class="row" style="height:42vh; margin: 0px 0px 10px;"> <!-- Start of Work Panel/Viewport -->
+			<div class="col-md-6" style="height:inherit; padding-left:0px; padding-right: 10px;">
+				<div class="panel panel-primary" style="height:inherit;">
+					<div class="panel-heading clearfix">
+				    	<!-- <h1 class="panel-title pull-left" style="padding-top: 7.5px;"></h1> -->
+						<ol class="panel-title pull-left breadcrumb">
+						  <li><a href="#">Home</a></li>
+						  <li><a href="#">Library</a></li>
+						  <li class="active">Data</li>
+						</ol>
+						<div class="input-group pull-right">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</div>
+					
+					<div id="work-panel" class="panel-body">	
+					Panel content
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-6" style="height:inherit; padding-left: 10px; padding-right:0px;">
+				<video id="viewport" class="video-js vjs-default-skin vjs-big-play-centered" controls
+			 		preload="auto" width="100%" height="100%" data-setup='{"example_option":true}'>
+			  		<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+					  <p class="vjs-no-js">
+					    To view this video please enable JavaScript, and consider upgrading to a web browser
+					    that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					  </p>
+				</video>
+			</div>
+		</div> <!-- End of Work Panel/Viewport -->
+		
+		<div class="row" style="height:43vh; margin: 10px 0px 10px;"> <!-- Start of Content Panel/Timeline -->
+			<div class="col-md-3" style="height:100%; padding-left:0px; padding-right: 5px;">
+				<div id="content-panel" class="panel panel-primary" style="height:100%;">
+					<div class="panel-heading clearfix">
+				    	<h3 class="panel-title pull-left">My Content</h3>
+
+					</div>
+					
+					<div id="content-button-panel" class="panel-body">	
+						<button id="brand-content-btn" type="button" class="btn btn-default btn-lg">
+							Branding
+						</button>
+						<button id="script-content-btn" type="button" class="btn btn-default btn-lg">
+							Script
+						</button>
+						<button id="footage-content-btn" type="button" class="btn btn-default btn-lg">
+							Footage
+						</button>
+						<button id="graphics-content-btn" type="button" class="btn btn-default btn-lg">
+							Graphics
+						</button>
+						<button id="stock-content-btn" type="button" class="btn btn-default btn-lg">
+							Stock Assets
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-9" style="height:100%; padding-left:5px; padding-right:0px;">
+				<div id="storyline-panel" class="panel panel-primary" style="height:100%;">
+					<div class="panel-heading clearfix">
+				    	<h3 class="panel-title pull-left">Storyline</h3>
+
+					</div>
+					
+					<div id="storyline-track-panel" class="panel-body" style="height:90%;">	
+						<div class="container-fluid" style="height: 100%; padding: 10px 0px 10px;">
+							<div id="layer-track-row" class="row storyline-track-row" >
+								<div class="col-md-1 storyline-symbol-column" style="height: 100%;">
+									<img src="/assets/images/logos/layer_logo_small.png">
+								</div>
+								
+								<div class="col-md-11 storyline-track-column left-seperator right-seperator" style="height: 100%; padding: 0px 7.5px 7.5px;">
+									<div class="storyline-track">
+										
+									</div>
+								</div>
+							</div>
+							
+							<div id="film-track-row" class="row storyline-track-row">
+								<div class="col-md-1 storyline-symbol-column" style="height: 100%;">
+									<img src="/assets/images/logos/film_logo_small.png">
+								</div>
+								
+								<div class="col-md-11 storyline-track-column left-seperator right-seperator dashed-seperator" style="height: 100%; padding: 7.5px 7.5px 7.5px;">
+									<div class="storyline-track">
+										
+									</div>
+								</div>
+							</div>
+							
+							<div id="audio-track-row" class="row storyline-track-row">
+								<div class="col-md-1 storyline-symbol-column" style="height: 100%;">
+									<img src="/assets/images/logos/audio_logo_small.png">
+								</div>
+								
+								<div class="col-md-11 storyline-track-column left-seperator right-seperator" style="height: 100%; padding: 7.5px 7.5px 0px;">
+									<div class="storyline-track">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- End of Content Panel/Timeline -->
+		
+		
 </body>
 </html>

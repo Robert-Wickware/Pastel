@@ -18,11 +18,15 @@
   "homepage": "https://github.com/Robert-Wickware/Pastel#readme",
   "dependencies": {
     "express": "^4.13.0",
+    "extend": "^3.0.0",
+    "map-stream": "0.0.6",
     "me2": "0.0.2",
     "mongodb-uri": "^0.9.7",
     "mongoose": "^4.0.6",
     "path": "^0.11.14",
-    "util": "^0.10.3"
+    "util": "^0.10.3",
+    "video.js": "^4.12.10",
+    "yamljs": "^0.2.3"
   },
   "engines": {
     "node": "0.12.x"
