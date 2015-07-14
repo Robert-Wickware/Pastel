@@ -1,11 +1,24 @@
+@import("http://fonts.googleapis.com/css?family=Roboto");
+
 html,
 body {
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family: "Roboto", sans-serif;
 	color: #5FC2CA;
 	background-color: #1F1F1F;
 
 	/* Margins */
 	margin: 10px;
+}
+
+.vjs-default-skin .vjs-controls {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.vjs-fade-in,.vjs-fade-out {
+	visibility: visible !important;
+	opacity: 1 !important;
+	transition-duration: 0s!important;
 }
 
 
@@ -67,16 +80,27 @@ body {
 .btn-default:hover {
 	background-color: #2F2F2F;
 }
+.btn-default:focus, .btn-default:active,
+.btn-default:focus:active {
+	outline: none !important;
+	background-color: #484848;
+}
 
 
 /* Overloading Bootstrap Primary Button */
 .btn-primary {
-	background-color: #5FC2CA;
+	background-color: #8AD3D2;
 	border-color: #38BEBC;
 	border-radius: 0px;
 }
 .btn-primary:hover {
 	background-color: #68ADAA;
+}
+
+.btn-primary:focus, .btn-primary:active,
+.btn-primary:focus:active {
+	outline: none !important;
+	background-color: #9DE0DE;
 }
 
 
@@ -108,6 +132,22 @@ body {
 	padding: 10px 0px 10px;
 }
 
+/* Bootstrap Dropdown Menu */
+.dropdown-menu {
+	background-color: #484848;
+	border-radius: 0px;
+	
+	border: 2px solid #5FC2CA;
+}
+
+.dropdown-menu >li > a {
+	color: #FFFFFF;
+}
+
+.dropdown-menu > .divider {
+	background-color: #E50269;
+}
+
 /* ------------------------------------------------------------ */
 
 
@@ -134,7 +174,7 @@ body {
 	position: relative;
 }
 .storyline-symbol-column > img {
-	width: 55%;
+	width: 50%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -168,24 +208,29 @@ body {
 }
 
 #content-button-panel {
-	display: block;
 	height: 90%;
 	
-	padding-left: 0px;
-	padding-right: 0px;
+	margin-top: 0px;
+	padding: 0px 0px 0px;
+}
+
+.content-btn-container {
+	width: 100%;
+	height: 20%;
+	padding: 5px 0px 5px;
 }
 
 #content-button-panel button {
 	width: 100%;
-	height: 18.75%;
-	
-	margin: 0px 0px 10px;
+	height: 100%;
+	margin: 0px 0px 0px;
 	
 	text-align: left;
 	
 	border-width: 0px;
 	border-left-width: 10px;
 	border-left-style: solid;
+	border-radius: 0px;
 }
 
 #brand-content-btn {

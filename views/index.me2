@@ -27,9 +27,18 @@
 
 <body>
 		<nav class="navbar">
-			<a class="navbar-brand" href="#">
-				<img class="pull-left" src="/assets/images/logos/pastel_logo_small.png" alt="Pastel Logo">
-			</a>
+			<span class="dropdown">
+				<a  href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<img class="pull-left" src="/assets/images/logos/pastel_logo_small.png" alt="Pastel Logo">
+				</a>
+				<ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li role="separator" class="divider"></li>
+		            <li><a href="#">Separated link</a></li>
+      			</ul>
+			</span>
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
@@ -96,22 +105,34 @@
 
 					</div>
 					
-					<div id="content-button-panel" class="panel-body">	
-						<button id="brand-content-btn" type="button" class="btn btn-default btn-lg">
-							Branding
-						</button>
-						<button id="script-content-btn" type="button" class="btn btn-default btn-lg">
-							Script
-						</button>
-						<button id="footage-content-btn" type="button" class="btn btn-default btn-lg">
-							Footage
-						</button>
-						<button id="graphics-content-btn" type="button" class="btn btn-default btn-lg">
-							Graphics
-						</button>
-						<button id="stock-content-btn" type="button" class="btn btn-default btn-lg">
-							Stock Assets
-						</button>
+					<div id="content-button-panel" class="panel-body" style="height: 90%; width: 100%;">
+						<div class="btn-group-vertical" style="height: 100%; width: 100%;">	
+							<div class="content-btn-container">
+								<button id="brand-content-btn" type="button" class="btn btn-default btn-lg">
+									Branding
+								</button>
+							</div>
+							<div class="content-btn-container">
+								<button id="script-content-btn" type="button" class="btn btn-default btn-lg">
+									Script
+								</button>
+							</div>
+							<div class="content-btn-container">
+								<button id="footage-content-btn" type="button" class="btn btn-default btn-lg">
+									Footage
+								</button>
+							</div>
+							<div class="content-btn-container">
+								<button id="graphics-content-btn" type="button" class="btn btn-default btn-lg">
+									Graphics
+								</button>
+							</div>
+							<div class="content-btn-container">
+								<button id="stock-content-btn" type="button" class="btn btn-default btn-lg">
+									Stock Assets
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
