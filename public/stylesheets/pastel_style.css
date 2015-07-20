@@ -66,6 +66,92 @@ body {
 	padding-right: 10px;
 }
 
+/* ----- Slider Styling ----- */
+input[type=range].slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 5px 0;
+}
+input[type=range].slider:focus {
+  outline: none;
+}
+input[type=range].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #484848;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range].slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 1px solid #111111;
+  height: 19px;
+  width: 12px;
+  border-radius: 2px;
+  background: #b7d009;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type=range].slider:focus::-webkit-slider-runnable-track {
+  background: #858585;
+}
+input[type=range].slider::-moz-range-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #484848;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+input[type=range].slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 1px solid #111111;
+  height: 19px;
+  width: 12px;
+  border-radius: 2px;
+  background: #b7d009;
+  cursor: pointer;
+}
+input[type=range].slider::-ms-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range].slider::-ms-fill-lower {
+  background: #0b0b0b;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range].slider::-ms-fill-upper {
+  background: #484848;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range].slider::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  border: 1px solid #111111;
+  height: 19px;
+  width: 12px;
+  border-radius: 2px;
+  background: #b7d009;
+  cursor: pointer;
+  height: 9px;
+}
+input[type=range].slider:focus::-ms-fill-lower {
+  background: #484848;
+}
+input[type=range].slider:focus::-ms-fill-upper {
+  background: #656565;
+}
 
 
 
@@ -89,16 +175,19 @@ body {
 
 /* Overloading Bootstrap Primary Button */
 .btn-primary {
+	color: #293233;
 	background-color: #8AD3D2;
 	border-color: #38BEBC;
 	border-radius: 0px;
 }
 .btn-primary:hover {
+	color: #293233;
 	background-color: #68ADAA;
 }
 
 .btn-primary:focus, .btn-primary:active,
 .btn-primary:focus:active {
+	color: #293233;
 	outline: none !important;
 	background-color: #9DE0DE;
 }
@@ -164,6 +253,7 @@ body {
 	border-bottom: 2px dashed #484848;
 }
 
+
 .storyline-track-row {
 	margin: 0px 0px 0px;
 }
@@ -199,8 +289,173 @@ body {
 /* ------- Custom ID Styling -------- */
 /* ------------------------------------------------------------ */
 #work-panel {
-	height: auto;
+	height: 90%;
+	padding: 15px;
 }
+
+#work-button-panel {
+	padding: 0px;
+}
+#work-button-panel > .btn-group > button {
+	width: 100px;
+	margin-right: 20px;
+}
+
+#work-component-panel {
+	height: 95%;
+	padding: 15px 0px 15px;
+}
+.work-component {
+	height: 100%;
+}
+
+#script-component-panel > .form-group {
+	height:90%;
+	margin-bottom: 10px;
+}
+#script-component-panel textarea{
+	width: 100%;
+	max-width: 100%;
+	
+	height: 90%;
+	max-height: 90%;
+	
+	font-size: 25px;
+}
+#script-component-panel > .btn-group > button {
+	width: 100px;
+	margin-left: 20px;
+}
+
+.record-component {
+	width: 100%;
+	max-width: 100%;
+	
+	height: 28%;
+	max-height: 28%;
+	
+	background-color: #242424;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.record-component-title {
+	float: left;
+	height: 100%;
+	width: 15%;
+	max-width: 15%;
+	
+	margin: auto;
+	display: table;
+	text-align: center;
+	
+	color: #FFFFFF;
+}
+.record-component-title > div {
+	color: inherit;
+	font-size: 20px;
+	display: table-cell;   
+	vertical-align: middle;   
+}
+
+.record-component-data {
+	float: left;
+	height: 100%;
+	width: 55%;
+	max-width: 55%;
+	margin: auto;
+	padding: 1% 3% 0.1%;
+}
+.record-component-data > .framing-component {
+	color: #FFFFFF;
+	width: 31%;
+	text-align: center;
+	float: left;
+}
+.record-component-data > .framing-component > img{
+	width: 100%;
+	padding: 2px;
+	margin-bottom: 5px;
+}
+.record-component-data > .framing-component > img:hover{
+	border: 2px solid #FFFFFF;
+	margin-bottom: 4px;
+}
+.record-component-data > .framing-component > .active {
+	border: 2px solid #B7D009;
+	margin-bottom: 4px;
+}
+
+#framing-center {
+	margin-left: 3.5%;
+	margin-right: 3.5%;
+}
+
+.record-component-data > .component-descriptor {
+	position: relative;
+	color: #FFFFFF;
+	width: 100%;
+	height: 40%;
+	margin: auto auto 10px;
+}
+.record-component-data > .component-descriptor > span {
+	display: absolute;
+	font-size: 20px;
+	vertical-align: bottom;
+}
+
+.record-component-data > .component-auto {
+	color: #FFFFFF;
+	width: 100%;
+	height: 30%;
+	padding-top: 10px;
+}
+
+.component-auto > label > input {
+	margin-left: 10px;
+}
+
+.record-component-notifier {
+	float: left;
+	height: 100%;
+	width: 30%;
+	max-width: 30%;
+	
+	margin: auto;
+	padding: 3% 1% 3% 2%;
+}
+.notifier {
+	width: 100%;
+	height: 100%;
+	border: 2px solid #111111;
+	
+	display: table;
+	text-align: center;
+}
+.notifier > div {
+	color: inherit;
+	font-size: 20px;
+	display: table-cell;   
+	vertical-align: middle;   
+}
+
+.pass {
+	color: #242424;
+	background-color: #B7D009;
+}
+.fail {
+	color: #FFFFFF;
+	background-color: #B70025;
+}
+.calibrate {
+	color: #FFFFFF;
+	background-color: #EDCE0E;
+}
+
+#record-btn {
+	width:30%;
+}
+
 
 #content-panel {
 	background-color: rgba(0, 0, 0, 0);
@@ -284,6 +539,7 @@ body {
 }
 
 #storyline-track-panel {
+	background-color: #111111;
 	height: 100%;
 	padding: 0px;
 }

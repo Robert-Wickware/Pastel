@@ -57,14 +57,14 @@
 				</ul>
 				
 				<button id="save-btn" type="button" class="btn btn-primary btn-lg navbar-btn navbar-right">
-					<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>  Save
+				<!-- <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> -->  Save
 				</button>
 
 			</div>
 
 		</nav>
 		
-		<div class="row" style="height:42vh; margin: 0px 0px 10px;"> <!-- Start of Work Panel/Viewport -->
+		<div class="row" style="height:48vh; margin: 0px 0px 10px;"> <!-- Start of Work Panel/Viewport -->
 			<div class="col-md-6" style="height:inherit; padding-left:0px; padding-right: 10px;">
 				<div class="panel panel-primary" style="height:inherit;">
 					<div class="panel-heading clearfix">
@@ -79,8 +79,111 @@
 						</div>
 					</div>
 					
-					<div id="work-panel" class="panel-body">	
-					Panel content
+					<div id="work-panel" class="panel-body">
+						<div id="work-button-panel" class="container-fluid">
+							<div class="btn-group">
+								<button id="script-work-btn" type="button" class="btn btn-primary btn-md active">Script</button>
+								<button id="record-work-btn" type="button" class="btn btn-primary btn-md">Record</button>
+								<button id="edit-work-btn" type="button" class="btn btn-primary btn-md">Edit</button>
+							</div>
+						</div>
+						
+						<div id="work-component-panel" class="container-fluid">	
+							<div id="script-component-panel" class="work-component active">
+								<div class="form-group">
+								  <label for="comment">Write your script here:</label>
+								  <textarea class="form-control" rows="12" id="script-form"></textarea>
+								</div>
+								<div class="btn-group pull-right">
+									<button id="clear-script-btn" type="button" class="btn btn-primary btn-md">Clear</button>
+									<button id="accept-script-btn" type="button" class="btn btn-primary btn-md">Accept</button>
+								</div>
+							</div>
+							
+							<div id="record-component-panel" class="work-component">
+								<div class="record-component">
+									<div class="record-component-title">
+										<div>Framing</div>
+									</div>
+									<div id="framing-right" class="record-component-data left-seperator right-seperator">
+										<div id="framing-left" class="framing-component">
+											<img src="/assets/images/logos/framing_left.png" style="height:100%;">
+											<div>Left</div>
+										</div>
+										<div id="framing-center" class="framing-component">
+											<img class="active" src="/assets/images/logos/framing_center.png" style="height:100%;">
+											<div>Center</div>
+										</div>
+										<div id="framing-right" class="framing-component">
+											<img src="/assets/images/logos/framing_right.png" style="height:100%;">
+											<div>Right</div>
+										</div>
+									</div>
+									<div class="record-component-notifier">
+										<div class="notifier pass">
+											<div>Pass</div>
+										</div>
+									</div>
+								</div>
+								<div class="record-component">
+									<div class="record-component-title">
+										<div>Lighting</div>
+									</div>
+									<div class="record-component-data left-seperator right-seperator">
+										<div class="component-descriptor">
+											<span class="pull-left">Light Level</span>
+											<img class="pull-right" src="/assets/images/logos/light_logo_small.png" style="height:100%;">
+										</div>
+										<input class="slider" type="range" name="points" min="0" max="100">
+										<div class="component-auto">
+											<label class="pull-right">
+												Auto <input class="checkbox pull-right" type="checkbox">
+											</label>
+										</div>
+									</div>
+									<div class="record-component-notifier">
+										<div class="notifier fail">
+											<div>Fail</div>
+										</div>
+									</div>
+								</div>
+								<div class="record-component">
+									<div class="record-component-title">
+										<div>Audio</div>
+									</div>
+									<div class="record-component-data left-seperator right-seperator">
+										<div class="component-descriptor">
+											<span class="pull-left">Audio Level</span>
+											<img class="pull-right" src="/assets/images/logos/microphone_logo_small.png" style="height:100%;">
+										</div>
+										<input class="slider" type="range" name="points" min="0" max="100">
+										<div class="component-auto">
+											<label class="pull-right">
+												Auto <input class="checkbox pull-right" type="checkbox">
+											</label>
+										</div>
+									</div>
+									<div class="record-component-notifier">
+										<div class="notifier calibrate">
+											<div>Calibrate</div>
+										</div>
+									</div>
+								</div>
+								
+								<button id="record-btn" type="button" class="btn btn-primary btn-lg pull-right">Record</button>
+							</div>
+							
+							<div id="edit-component-panel" class="work-component">
+								<div class="form-group">
+								  <label for="comment">EDIT your script here:</label>
+								  <textarea class="form-control" rows="12" id="script-form"></textarea>
+								</div>
+								<div class="btn-group pull-right">
+									<button id="clear-script-btn" type="button" class="btn btn-primary btn-md">Clear</button>
+									<button id="accept-script-btn" type="button" class="btn btn-primary btn-md">Accept</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -91,14 +194,14 @@
 			  		<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
 					  <p class="vjs-no-js">
 					    To view this video please enable JavaScript, and consider upgrading to a web browser
-					    that <a href="https//videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					    that <a href="httpss//videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 					  </p>
 				</video>
 			</div>
 		</div> <!-- End of Work Panel/Viewport -->
 		
-		<div class="row" style="height:43vh; margin: 10px 0px 10px;"> <!-- Start of Content Panel/Timeline -->
-			<div class="col-md-3" style="height:100%; padding-left:0px; padding-right: 5px;">
+		<div class="row" style="height:38vh; margin: 10px 0px 10px;"> <!-- Start of Content Panel/Timeline -->
+			<div class="col-md-2" style="height:100%; padding-left:0px; padding-right: 5px;">
 				<div id="content-panel" class="panel panel-primary" style="height:100%;">
 					<div class="panel-heading clearfix">
 				    	<h3 class="panel-title pull-left">My Content</h3>
@@ -137,7 +240,7 @@
 				</div>
 			</div>
 			
-			<div class="col-md-9" style="height:100%; padding-left:5px; padding-right:0px;">
+			<div class="col-md-10" style="height:100%; padding-left:5px; padding-right:0px;">
 				<div id="storyline-panel" class="panel panel-primary" style="height:100%;">
 					<div class="panel-heading clearfix">
 				    	<h3 class="panel-title pull-left">Storyline</h3>
