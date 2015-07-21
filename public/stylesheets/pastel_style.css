@@ -184,6 +184,13 @@ input[type=range].slider:focus::-ms-fill-upper {
 	color: #293233;
 	background-color: #68ADAA;
 }
+.btn-primary.active, .btn-primary:active,
+.btn-primary.active:focus, 
+.open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #E50269;
+  border-color: #E50269;
+}
 
 .btn-primary:focus, .btn-primary:active,
 .btn-primary:focus:active {
@@ -327,7 +334,8 @@ input[type=range].slider:focus::-ms-fill-upper {
 	margin-left: 20px;
 }
 
-.record-component {
+.record-component,
+.edit-component {
 	width: 100%;
 	max-width: 100%;
 	
@@ -338,8 +346,21 @@ input[type=range].slider:focus::-ms-fill-upper {
 	padding: 10px;
 	margin-bottom: 10px;
 }
+#overlay-edit-component {
+	height: 40%;
+	max-height: 40%;
+}
+#color-edit-component {
+	height: 32%;
+	max-height: 32%;
+}
+#audio-edit-component {
+	height: 26%;
+	max-height: 26%;
+}
 
-.record-component-title {
+.record-component-title, 
+.edit-component-title {
 	float: left;
 	height: 100%;
 	width: 15%;
@@ -351,44 +372,89 @@ input[type=range].slider:focus::-ms-fill-upper {
 	
 	color: #FFFFFF;
 }
-.record-component-title > div {
+.record-component-title > div,
+.edit-component-title > div {
 	color: inherit;
 	font-size: 20px;
 	display: table-cell;   
 	vertical-align: middle;   
 }
 
-.record-component-data {
+.record-component-data,
+.edit-component-data {
 	float: left;
 	height: 100%;
+	margin: auto;
+	padding: 0.5% 3% 0.5%;
+}
+.record-component-data {
 	width: 55%;
 	max-width: 55%;
-	margin: auto;
-	padding: 1% 3% 0.1%;
 }
-.record-component-data > .framing-component {
+.edit-component-data {
+	width: 85%;
+	max-width: 85%;
+}
+
+.record-component-data > .framing-component,
+.edit-component-data > .overlay-component {
 	color: #FFFFFF;
+	height: 80%;
 	width: 31%;
 	text-align: center;
 	float: left;
 }
-.record-component-data > .framing-component > img{
+record-component-data > .framing-component {
+	border: 2px solid rgba(0, 0, 0, 0);
+}
+.edit-component-data > .overlay-component {
+	border: 2px solid #5FC2CA;
+}
+
+.record-component-data > .framing-component > img, 
+.edit-component-data > .overlay-component > img {
 	width: 100%;
 	padding: 2px;
 	margin-bottom: 5px;
 }
-.record-component-data > .framing-component > img:hover{
+.record-component-data > .framing-component:hover,
+.edit-component-data > .overlay-component:hover {
 	border: 2px solid #FFFFFF;
 	margin-bottom: 4px;
 }
-.record-component-data > .framing-component > .active {
+.record-component-data > .framing-component.active {
 	border: 2px solid #B7D009;
 	margin-bottom: 4px;
 }
 
-#framing-center {
+#framing-center, #watermark{
 	margin-left: 3.5%;
 	margin-right: 3.5%;
+}
+
+.color-adjust-slider-container {
+	height: 50%;
+	padding: 5px 10px 5px 0px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+#color-adjust-sliders {
+	float: left;
+	height: 100%;
+	width: 75%;
+}
+#color-adjust-auto {
+	float: left;
+	height: 100%;
+	width: 25%;
+	color: #FFFFFF;
+	padding: 4%;
+}
+#color-adjust-auto > .btn-group {
+	margin-top: 10px;
+}
+.audio-adjust-slider-container {
+	color: #FFFFFF;
 }
 
 .record-component-data > .component-descriptor {
@@ -415,7 +481,8 @@ input[type=range].slider:focus::-ms-fill-upper {
 	margin-left: 10px;
 }
 
-.record-component-notifier {
+.record-component-notifier, 
+.edit-component-notifier {
 	float: left;
 	height: 100%;
 	width: 30%;
@@ -433,6 +500,8 @@ input[type=range].slider:focus::-ms-fill-upper {
 	text-align: center;
 }
 .notifier > div {
+	width: 100%;
+	height: 100%;
 	color: inherit;
 	font-size: 20px;
 	display: table-cell;   

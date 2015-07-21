@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Template Test</title>
+	<title>Pastel Mockup</title>
 	
 	<!-- Video.js linking -->
 	<link href="https://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
@@ -42,16 +42,16 @@
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="left-seperator">
+					<li id="template-nav-btn" class="left-seperator active" role="presentation">
 						<a href="#"> <img src="/assets/images/logos/template_logo_small.png">Template</a>
 					</li>
-					<li class="left-seperator right-seperator">
+					<li id="script-nav-btn" class="left-seperator right-seperator" role="presentation">
 						<a href="#"> <img src="/assets/images/logos/script_logo_small.png">Script</a>
 					</li>
-					<li class="right-seperator">
+					<li id="record-nav-btn" class="right-seperator" role="presentation">
 						<a href="#"> <img src="/assets/images/logos/record_logo_small.png">Record</a>
 					</li>
-					<li class="right-seperator">
+					<li id="edit-nav-btn" class="right-seperator" role="presentation">
 						<a href="#"> <img src="/assets/images/logos/edit_logo_small.png">Edit</a>
 					</li>
 				</ul>
@@ -105,13 +105,13 @@
 									<div class="record-component-title">
 										<div>Framing</div>
 									</div>
-									<div id="framing-right" class="record-component-data left-seperator right-seperator">
+									<div class="record-component-data left-seperator right-seperator">
 										<div id="framing-left" class="framing-component">
 											<img src="/assets/images/logos/framing_left.png" style="height:100%;">
 											<div>Left</div>
 										</div>
-										<div id="framing-center" class="framing-component">
-											<img class="active" src="/assets/images/logos/framing_center.png" style="height:100%;">
+										<div id="framing-center" class="framing-component active">
+											<img src="/assets/images/logos/framing_center.png" style="height:100%;">
 											<div>Center</div>
 										</div>
 										<div id="framing-right" class="framing-component">
@@ -131,7 +131,7 @@
 									</div>
 									<div class="record-component-data left-seperator right-seperator">
 										<div class="component-descriptor">
-											<span class="pull-left">Light Level</span>
+											<span class="pull-left" style="padding-top:10px;">Light Level</span>
 											<img class="pull-right" src="/assets/images/logos/light_logo_small.png" style="height:100%;">
 										</div>
 										<input class="slider" type="range" name="points" min="0" max="100">
@@ -153,7 +153,7 @@
 									</div>
 									<div class="record-component-data left-seperator right-seperator">
 										<div class="component-descriptor">
-											<span class="pull-left">Audio Level</span>
+											<span class="pull-left" style="padding-top:10px;">Audio Level</span>
 											<img class="pull-right" src="/assets/images/logos/microphone_logo_small.png" style="height:100%;">
 										</div>
 										<input class="slider" type="range" name="points" min="0" max="100">
@@ -174,14 +174,65 @@
 							</div>
 							
 							<div id="edit-component-panel" class="work-component">
-								<div class="form-group">
-								  <label for="comment">EDIT your script here:</label>
-								  <textarea class="form-control" rows="12" id="script-form"></textarea>
+								<div id="overlay-edit-component" class="edit-component">
+									<div class="edit-component-title">
+										<div>Overlays</div>
+									</div>
+									<div class="edit-component-data left-seperator">
+										<div id="global-filter" class="overlay-component">
+											<img src="/assets/images/logos/framing_center.png" style="height:100%;">
+											<div>Global Filter</div>
+										</div>
+										<div id="watermark" class="overlay-component">
+											<img src="/assets/images/logos/framing_center.png" style="height:100%;">
+											<div>Watermark</div>
+										</div>
+										<div id="" class="overlay-component">
+											<img src="/assets/images/logos/framing_center.png" style="height:100%;">
+											<div>Something Else</div>
+										</div>
+									</div>
 								</div>
-								<div class="btn-group pull-right">
-									<button id="clear-script-btn" type="button" class="btn btn-primary btn-md">Clear</button>
-									<button id="accept-script-btn" type="button" class="btn btn-primary btn-md">Accept</button>
+								
+								<div id="color-edit-component" class="edit-component">
+									<div class="edit-component-title">
+										<div>Color</div>
+									</div>
+									<div class="edit-component-data left-seperator">
+										<div id="color-adjust-sliders">
+											<div class="color-adjust-slider-container">
+												<span>Brightness</span>
+												<input class="slider" style="margin-top: 10px;" type="range" name="points" min="0" max="100" value="50">
+											</div>
+											<div class="color-adjust-slider-container">
+												<span>Contrast</span>
+												<input class="slider" style="margin-top: 10px;" type="range" name="points" min="0" max="100" value="50">
+											</div>
+										</div>
+										<div id="color-adjust-auto">
+											<span>Color Adjust</span>
+											<div class="btn-group">
+												<button id="color-auto-btn" type="button" class="btn btn-primary btn-md active">Auto</button>
+												<button id="color-manual-btn" type="button" class="btn btn-primary btn-md">Manual</button>
+											</div>
+										</div>
+									</div>
 								</div>
+								
+								<div id="audio-edit-component" class="edit-component">
+									<div class="edit-component-title">
+										<div>Audio</div>
+									</div>
+									<div class="edit-component-data left-seperator">
+										<div class="audio-adjust-slider-container">
+											<span style="font-size: 20px;">Audio Level</span>
+											<input class="slider" style="margin-top: 10px;" type="range" name="points" min="0" max="100" value="50">
+											<span class="pull-left">Louder Music</span>
+											<span class="pull-right">Louder Speaker</span>
+										</div>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 					</div>
